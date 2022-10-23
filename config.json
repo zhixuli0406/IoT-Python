@@ -1,0 +1,24 @@
+{
+	"Sensor" : [		
+		{
+			"name": "環保署國家空品測站",
+			"layername": "AirQuality_PM2dot5",
+			"api": "https://sta.ci.taiwan.gov.tw/STA_AirQuality_v2/v1.0/Datastreams?$expand=Thing/Locations,Observations($top=1;$orderby=phenomenonTime+desc)&$filter=name eq 'PM2.5' AND substringof('空氣品質測站',Thing/name) AND Thing/properties/authority eq '行政院環境保護署'"
+		},
+		{
+			"name": "環保署智慧城鄉空品微型感測器",
+			"layername": "AirQuality_EPAIoT_PM2dot5",
+			"api": "https://sta.ci.taiwan.gov.tw/STA_AirQuality_EPAIoT/v1.0/Datastreams?$expand=Thing/Locations,Observations($top=1;$orderby=phenomenonTime+desc)&$filter=name eq 'PM2.5'"
+		},
+		{
+			"name": "中研院校園空品微型感測器",
+			"layername": "AirQuality_AirBox_PM2dot5",
+			"api": "https://sta.ci.taiwan.gov.tw/STA_AirQuality_v2/v1.0/Datastreams?$expand=Thing/Locations,Observations($top=1;$orderby=phenomenonTime+desc)&$filter=name eq 'PM2.5' AND substringof('空品微型感測器',Thing/name) AND Thing/properties/authority eq '中研院'"
+		},
+		{
+			"name": "科技部智慧園區空品測站",
+			"layername": "AirQuality_AirBox_MOST",
+			"api": "https://sta.ci.taiwan.gov.tw/STA_AirQuality_MOST/v1.0/Datastreams?$expand=Thing/Locations,Observations($top=1;$orderby=phenomenonTime+desc)&$filter=name eq 'PM2.5'"
+		}
+	]
+}
